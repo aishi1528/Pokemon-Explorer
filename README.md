@@ -22,12 +22,3 @@ Search by **name** (e.g., `pikachu`) or **ID** (e.g., `25`), or get a **random P
 ---
 
   
-
----
-
-## 🚀 Getting Started
-
-1. Clone the repository:
-   ```bash
-   git clone https://github.com/your-username/pokemon-explorer.git
-   cd pokemon-explorer
