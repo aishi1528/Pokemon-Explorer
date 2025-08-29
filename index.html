@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pokemon explorer</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="app">
+  <header>
+    <h1>🧢 Pokémon Explorer</h1>
+    <p>Search any Pokémon by name (e.g., <code>pikachu</code>) or ID (e.g., <code>25</code>).</p>
+    <div class="controls">
+      <input id="query" type="text" placeholder="e.g., bulbasaur or 1" />
+      <button id="searchBtn">Search</button>
+      <button id="randomBtn" class="ghost">Random</button>
+    </div>
+    <div class="hint">Tip: Press Enter to search. Data from <a href="https://pokeapi.co/" target="_blank" rel="noopener">PokéAPI</a>.</div>
+  </header>
+
+  <main id="content">
+    <section id="error" class="hidden"></section>
+
+    <section id="card" class="card hidden">
+      <div class="card-top">
+        <div class="media">
+          <img id="art" alt="Pokemon artwork" />
+        </div>
+        <div class="summary">
+          <h2><span id="name">—</span> <span id="id" class="muted">#—</span></h2>
+          <div id="types" class="types"></div>
+          <div class="kv">
+            <div><span class="k">Height</span><span class="v" id="height">—</span></div>
+            <div><span class="k">Weight</span><span class="v" id="weight">—</span></div>
+            <div><span class="k">Base XP</span><span class="v" id="basexp">—</span></div>
+          </div>
+          <div>
+            <h3>Abilities</h3>
+            <ul id="abilities" class="chips"></ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="stats">
+        <h3>Base Stats</h3>
+        <div id="stats"></div>
+      </div>
+
+      <div class="matchups">
+        <h3>Type Matchups</h3>
+        <div class="matchup-rows">
+          <div>
+            <h4>Weak To (2× / 4×)</h4>
+            <div id="weak" class="types"></div>
+          </div>
+          <div>
+            <h4>Resists (½× / ¼×)</h4>
+            <div id="resist" class="types"></div>
+          </div>
+          <div>
+            <h4>Immune (0×)</h4>
+            <div id="immune" class="types"></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="evolution">
+        <h3>Evolution Chain</h3>
+        <div id="evo" class="evo-chain"></div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <span>Made with ❤️ using PokeAPI</span>
+  </footer>
+</div>
+
+  <script src="script.js"></script>
+</body>
+</html>
